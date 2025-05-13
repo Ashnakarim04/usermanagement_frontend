@@ -39,12 +39,12 @@ const Login = () => {
 
     if (Object.keys(errors).length === 0) {
       try {
-        const response = await axios.post('http://localhost:5000/api/auth/login', formData);
+        const response = await axios.post('https://usermanagement-backend-vxs3.onrender.com/api/auth/login', formData);
         if (response.status === 200) {
           localStorage.setItem('token', response.data.token);
           localStorage.setItem('userId', response.data.userId); 
           toast.success('Login successful!');
-          navigate('/dashboard');
+          navigate('https://usermanagement-backend-vxs3.onrender.com/dashboard');
         }
       } catch (error) {
         toast.error(error.response?.data?.message || 'Login failed. Check your credentials.');
@@ -104,7 +104,7 @@ const Login = () => {
                 <div className="text-center mt-3">
                   <p className="small">
                     Don't have an account?{' '}
-                    <Link to="/register" className="text-decoration-underline text-primary">
+                    <Link to="https://usermanagement-backend-vxs3.onrender.com/register" className="text-decoration-underline text-primary">
                       Signup
                     </Link>
                   </p>

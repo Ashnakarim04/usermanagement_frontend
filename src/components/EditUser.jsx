@@ -16,7 +16,7 @@ const EditUser = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`/api/items/users/${id}`)
+      fetch(`https://usermanagement-backend-vxs3.onrender.com/api/items/users/${id}`)
         .then((res) => {
           if (!res.ok) throw new Error(`Fetch failed: ${res.status} - ${res.statusText}`);
           return res.json();
@@ -24,7 +24,7 @@ const EditUser = () => {
         .then((data) => {
           setUser(data);
           if (data.profileImage) {
-            setImagePreview(`/uploads/${data.profileImage}`);
+            setImagePreview(`https://usermanagement-backend-vxs3.onrender.com/uploads/${data.profileImage}`);
           }
         })
         .catch((err) => {
@@ -67,7 +67,7 @@ const EditUser = () => {
     }
 
     try {
-      const response = await fetch(`/api/items/users/${id}`, {
+      const response = await fetch(`https://usermanagement-backend-vxs3.onrender.com/api/items/users/${id}`, {
         method: 'PUT',
         body: formData,
       });
@@ -77,7 +77,7 @@ const EditUser = () => {
       }
 
       toast.success('User updated successfully!');
-      navigate('/dashboard');
+      navigate('https://usermanagement-backend-vxs3.onrender.com/dashboard');
     } catch (error) {
       toast.error('An error occurred: ' + error.message);
     }

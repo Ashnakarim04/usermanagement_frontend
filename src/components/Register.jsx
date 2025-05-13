@@ -54,7 +54,9 @@ const Register = () => {
 
     if (Object.keys(errors).length === 0) {
       try {
-        const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+        // const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+                const response = await axios.post('https://usermanagement-backend-vxs3.onrender.com/api/auth/register', formData);
+
         if (response.status === 200) {
           toast.success('Registered successfully!');
           navigate('/');
@@ -120,7 +122,7 @@ const Register = () => {
                 <div className="text-center mt-3">
                   <p className="small">
                     Already have an account?{' '}
-                    <Link to="/" className="text-decoration-underline text-primary">
+                    <Link to="https://usermanagement-backend-vxs3.onrender.com/" className="text-decoration-underline text-primary">
                       Login
                     </Link>
                   </p>

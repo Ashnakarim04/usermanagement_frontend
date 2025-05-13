@@ -8,7 +8,7 @@ const DeleteModal = ({ show, handleClose, user }) => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/items/users/${user._id}`, {
+      const response = await fetch(`https://usermanagement-backend-vxs3.onrender.com/api/items/users/${user._id}`, {
         method: 'DELETE',
       });
 

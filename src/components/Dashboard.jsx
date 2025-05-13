@@ -57,7 +57,7 @@ const Dashboard = () => {
   };
   const handleEditClick = (user) => {
     if (user && user._id) {
-      navigate(`/edituser/${user._id}`);
+      navigate(`https://usermanagement-backend-vxs3.onrender.com/edituser/${user._id}`);
     } else {
       console.error("User ID is undefined");
     }
@@ -66,7 +66,7 @@ const Dashboard = () => {
 
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/items/users')
+    axios.get('https://usermanagement-backend-vxs3.onrender.com/api/items/users')
       .then(res => {
         setUserList(res.data);
         setFilteredUsers(res.data);
@@ -178,7 +178,7 @@ const Dashboard = () => {
     });
 
     try {
-      await axios.post('http://localhost:5000/api/items/adduser', formData, {
+      await axios.post('https://usermanagement-backend-vxs3.onrender.com/api/items/adduser', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       toast.success('User added successfully!');
