@@ -57,7 +57,7 @@ const Dashboard = () => {
   };
   const handleEditClick = (user) => {
     if (user && user._id) {
-      navigate(`https://usermanagement-backend-vxs3.onrender.com/edituser/${user._id}`);
+      navigate(`/edituser/${user._id}`);
     } else {
       console.error("User ID is undefined");
     }

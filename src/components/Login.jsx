@@ -44,7 +44,7 @@ const Login = () => {
           localStorage.setItem('token', response.data.token);
           localStorage.setItem('userId', response.data.userId); 
           toast.success('Login successful!');
-          navigate('https://usermanagement-backend-vxs3.onrender.com/dashboard');
+          navigate('/dashboard');
         }
       } catch (error) {
         toast.error(error.response?.data?.message || 'Login failed. Check your credentials.');

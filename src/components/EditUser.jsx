@@ -77,7 +77,7 @@ const EditUser = () => {
       }
 
       toast.success('User updated successfully!');
-      navigate('https://usermanagement-backend-vxs3.onrender.com/dashboard');
+      navigate('/dashboard');
     } catch (error) {
       toast.error('An error occurred: ' + error.message);
     }
