@@ -104,7 +104,7 @@ const Login = () => {
                 <div className="text-center mt-3">
                   <p className="small">
                     Don't have an account?{' '}
-                    <Link to="https://usermanagement-backend-vxs3.onrender.com/register" className="text-decoration-underline text-primary">
+                    <Link to="/register" className="text-decoration-underline text-primary">
                       Signup
                     </Link>
                   </p>
