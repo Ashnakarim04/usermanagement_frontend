@@ -33,7 +33,7 @@ const DeleteModal = ({ show, handleClose, user }) => {
     <Modal isOpen={show} toggle={handleClose}>
       <ModalHeader toggle={handleClose}>Confirm Delete</ModalHeader>
       <ModalBody>
-        Are you sure you want to delete the student{' '}
+        Are you sure you want to delete the user{' '}
         <strong>{user.firstName} {user.lastName}</strong> from{' '}
         <strong>{user.department}</strong> department as a{' '}
         <strong>{user.userRole}</strong>?
